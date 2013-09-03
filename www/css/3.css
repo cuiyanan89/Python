@@ -1,0 +1,27 @@
+body,div{
+    margin:0px;
+    padding:0px;
+    }
+#main{
+    margin:0px auto;
+    width:1000px;
+    height:800px;
+    border:1px solid red;
+    }
+#nav{
+    background-image:url("../images/9.png");
+    background-repeat:repeat-x;
+    height:265px;
+    border:1px solid purple;
+    position:relative;
+    }
+#back{
+    background-image:url("../images/6.jpg");
+    background-position:right;
+    position:absolute;
+    width:350px;
+    height:263px;
+    top:0px;
+    left:650px;
+    z-index:1;
+    }

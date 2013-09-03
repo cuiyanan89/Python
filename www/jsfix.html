@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+            var x = parseFloat(prompt("输入原数：",1));
+            var n = parseInt(prompt("保留小数点后位数",0));
+            function fix(){
+                var div = Math.pow(10,n);
+                return Math.round(x*div)/div;
+            }
+        </script>
+	</head>
+	<body>
+        <script style="text/javascript">
+            document.write("<p>"+x+" 小数点后保留 "+n+" 位为 "+fix()+"</p>");
+        </script>
+	</body>
+</html>

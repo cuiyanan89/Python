@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="tf-8">
+        <title>form test</title>
+    </head>
+    <body background="./images/1.jpg">
+        <h2>signed</h2>
+        <form>
+            <table width="60%">
+            <tr><td>name</td><td><input type="text" value="input your name"></td></tr>
+            <tr><td>passwd</td><td><input type="password"></td></tr>
+            <tr>
+                <td>sex</td>
+                <td><label for="male">male</label><input type="radio" name="sex"id="male"checked="checked">
+                    <label for="famale">famale</label><input type="radio" name="sex"id="famale">
+                </td>
+            </tr>
+            <tr>
+                <td>favour</td>
+                <td>
+                    <label for="food">food</label><input type="checkbox" id="food"checked="checked">
+                    <label for="wine">wine</label><input type="checkbox" id="wine">
+                    <label for="majiang">majiang</label><input type="checkbox" id="majiang">
+                    <label for="travel">travel</label><input type="checkbox" id="travel">
+                </td>
+            </tr>
+            <tr>
+                <td>addr</td>
+                <td>
+                    <select>
+                        <option>beijing</option>
+                        <option>shanghai</option>
+                        <option>nanjing</option>
+                        <option>tianjin</option>
+                        <option>guangdong</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>headimg</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>info</td>
+                <td><textarea rows="10" cols="60">descripe</textarea></td>
+            </tr>
+            <tr>
+            <td><input type="submit" value="submit"></td>
+            <td><input type="reset" value="reset"></td>
+            </tr>
+        </form>
+    </body>
+</html>

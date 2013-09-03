@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+	</head>
+	<body>
+	    <ul>
+            <li>米粉<input type="checkbox" name="food" value="米粉"></li>
+            <li>红烧肉<input type="checkbox" name="food" value="红烧肉"></li>
+            <li>糖醋里脊<input type="checkbox" name="food" value="糖醋里脊"></li>
+            <li>糖醋排骨<input type="checkbox" name="food" value="糖醋排骨"></li>
+        </ul>
+        <input type="button" value="确定" onclick="check()">
+        <input type="button" value="删除" onclick="uncheck()">
+        <div id="media"></div>
+        <script type="text/javascript">
+            var media = document.getElementById("media");
+            function check(){
+                var food_array = document.getElementsByName("food");
+                for (var n = 0 ; n < food_array.length ; n++ ){
+                    if (food_array[n].checked){
+                        var food_obj = document.createElement("div");
+                        var food_text = document.createTextNode(food_array[n].value);
+                        food_obj.appendChild(food_text);
+                        media.appendChild(food_obj)
+                    }
+                }
+            }
+            function uncheck(){
+                /*var list = media.childNodes;
+                list_length = list.length;
+                for (var n = 0 ; n < list_length; n++){
+                    alert(n);
+                    media.removeChild(list[n]);
+                }
+                */
+                var food_array = document.getElementsByName("food");
+                for(var i=0; i<food_array.length; i++){
+                    food_array[i].checked = false;
+                }
+                media.innerHTML = '';
+            }
+        </script>
+
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>addmedia</title>
+
+        <style type = "text/css">
+        </style>
+
+	</head>
+	<body>
+        <table>
+            <tr>
+                <td>
+                    <label for = "text">text</label><input id = "text"type = "radio"name = "select"/>
+                    <label for = "file">file</label><input id = "file"type = "radio"name = "select" checked = "checked"/>
+                    <label for = "button">button</label><input id = "button"type = "radio"name = "select"/>
+                </td>
+                <td>
+                    <input type = "button"value = "添加附件"onclick = "add();"/>
+                    <input type = "button" value = "删除附件"onclick = "delobj();"/>
+                    <span style = "font-size:0.7em;">全部</span><input type = "checkbox"id = "checkbox"/>
+                </td>
+            </tr>
+        </table>
+	    <div id = "media"></div>
+        <script type = "text/javascript">
+            var n = 0;
+            var media = document.getElementById('media');
+            function add(){
+                var select = document.getElementsByName("select");
+                var text_in ;
+                for (var x = 0 ;x < select.length ; x++){
+                    if (select[x].checked){
+                        text_in = select[x].id;
+                    }
+                }
+                var obj_div = document.createElement('div');
+                var m = n.toString();
+                n++;
+                obj_div.setAttribute('id',m);
+                media.appendChild(obj_div);
+
+                var obj = document.createElement('input');
+                obj.setAttribute('type',text_in);
+                obj_div.appendChild(obj);
+
+                var obj_btn = document.createElement('input');
+                obj_btn.setAttribute('type','button');
+                obj_btn.setAttribute('value',m);
+                obj_btn.setAttribute('onclick','del(this)');
+                obj_div.appendChild(obj_btn);
+            }
+            function del(own){
+                var id_del = own.value;
+                obj_del = document.getElementById(id_del);
+                media.removeChild(obj_del);
+            }
+            function delobj(){
+                var checkbox = document.getElementById("checkbox");
+                if (checkbox.checked){
+                    var obj_del = media.childNodes;
+                    var del_array = new Array();
+                    for (x in obj_del){
+                        del_array.push(obj_del[x].id);
+                    }
+                   if (del_array.length > 0 ){
+                       for (x in del_array){
+                           media.removeChild(document.getElementById(del_array[x]));
+                       }
+                   }
+                }else{
+                   var select =document.getElementsByName('select');
+                   var text_in;
+                   for (var x = 0 ; x < select.length ; x++ ){
+                       if (select[x].checked){
+                           text_in = select[x].id;
+                       }
+                   }
+                   var obj_del = media.childNodes;
+                   var del_array = new Array();
+                   for (var x =0 ; x < obj_del.length ; x++){
+                       if (obj_del[x].firstChild.type == text_in){
+                           del_array.push(obj_del[x].id);
+                       }
+                   }
+                   if (del_array.length > 0 ){
+                       for (x in del_array){
+                           media.removeChild(document.getElementById(del_array[x]));
+                       }
+                   }
+               }
+            }
+        </script>
+	</body>
+</html>

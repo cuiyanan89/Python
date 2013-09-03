@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        n = prompt("所求数n?",1);
+        n = parseInt(n);
+        n_sqrt=parseInt(Math.sqrt(n));
+        for (var i=2;i<=n_sqrt;i++){
+            if (n%i==0){
+                break;
+            }
+        }
+        if (i>n_sqrt){
+            alert(n+"是质数");
+        }
+        </script>
+	</head>
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>zhishu_sum</title>
+
+        <style type="text/css">
+        </style>
+
+	</head>
+	<body>
+       <p><script type="text/javascript">
+        var x = prompt("所求质数范围x?",100);
+        var y = prompt("所求质数范围y?",100);
+        x = parseInt(x);
+        y = parseInt(y);
+        function isPrime(n){
+            n_sqrt = Math.sqrt(n);
+            for (var i = 2 ; i <= n_sqrt;i++){
+                if ( n%i==0 ){
+                    break;
+                }
+            }
+            if (i>n_sqrt){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function sumPrime( x, y){
+            if (x > y){
+                var t;
+                t = x;
+                x = y;
+                y = t;
+            }
+            if (x < 2){
+                x = 2;
+            }
+            var sum = 0;
+            for (var n = x;n <= y; n++){
+                if (isPrime(n)){
+                    sum += n;
+                }
+            }
+            return sum;
+        }
+        alert(sumPrime(x,y));
+        </script></p>
+	</body>
+</html>

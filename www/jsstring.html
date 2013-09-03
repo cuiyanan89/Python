@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>string</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+        <textarea id="mystr"></textarea>
+        <input type="button" value="统计" onclick="tongji();"/>
+        <div>共计<span id="length"><script>
+            function tongji(){
+                var mystr = document.getElementById("mystr");
+                var mylength = document.getElementById("length");
+                mylength.innerHTML = mystr.value.length;
+                var re = new RegExp(r"\S",'g');
+                var d = mystr.value.match(re);
+                alert(d.length);
+            }
+        </script></span>字符</div>
+	</body>
+</html>

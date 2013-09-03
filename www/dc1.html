@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        #duolaAmeng{
+            width:220px;
+            height:159;
+            position:relative;
+            top:0px;
+            left:0px;
+        }
+        </style>
+
+	</head>
+	<body>
+	    <img id="duolaAmeng" src="./images/3.jpg"/>
+        <script type="text/javascript">
+            var offset = 0;
+            var duolaAmeng = document.getElementById('duolaAmeng');
+            function move(){
+                if (offset > innerWidth-220-16){
+                    offset = 0;
+                }
+                duolaAmeng.style.left = offset + 'px';
+                offset +=10;
+            }
+            setInterval("move()",100);
+        </script>
+	</body>
+</html>

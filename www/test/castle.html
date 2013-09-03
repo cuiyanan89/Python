@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/castle.css"/>
+        <link rel="shortcut icon" href="../images/ico.ico">
+        <meta charset="utf-8">
+        <title>castle</title>
+        <style type="text/css"></style>
+        <script type="text/javascript" src="../js/castle.js"></script>
+    </head>
+    <body>
+        <div id="title_out">
+        <div id="title">
+            <div id="title_left">
+                <a href="">欢迎您&nbsp;追风筝的人</a>
+                <a href="">工具箱</a>
+                <a href="">退出登录</a>
+            </div>
+            <div id="title_right">
+                <a href="">常见问题</a>
+                <a href="">联系我们</a>
+                <a href="">收藏本站</a>
+            </div>
+        </div>
+        </div>
+        <div id="main">
+            <div id="top">
+                <div id="top_left">
+                    <img src="../images/3.jpg">您所在的城市
+                    <select>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>广州</option>
+                        <option>西安</option>
+                    </select>
+                </div>
+                <div id="top_right">咨询电话:15122175532</div>
+                <div id="top_menu">
+                    <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">购物中心</a></li>
+                    <li><a href="">今日推荐</a></li>
+                    <li><a href="">广而告之</a></li>
+                    <li><a href="">会员天地</a></li>
+                    <li><a href="">积分超市</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="center">
+                <div id="center_left">
+                <div>我的订单</div>
+                <hr>
+                <div><p>送货时间和地址</p>
+                    <p>时间
+                        <select id="time">
+                            <option>10:00</option>
+                            <option>11:00</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>14:00</option>
+                            <option>15:00</option>
+                        </select></p>
+                    <span>地址：</span><span id="address">沁园公寓902</span>
+                    <input type="button"value="更改收货地址" id="ad_btn"/>
+                    </p><hr>
+                </div>
+                <div><p>客户联系信息</p>
+                    <div>姓名：<input id="name"type="text"/></div>
+                    <div>手机：<input id="phone"type="text"/></div>
+                    <div>备注：<textarea rows="2"cols="10" id="textarea"></textarea></div>
+                    <hr>
+                </div>
+                <div><p>订购列表</p>
+                    <div id="menu"></div>
+                    <input type="button" id="no" value="取消订单">
+                    <input type="button" id="yes" value="生成订单">
+                </div>
+                </div>
+                <div id="center_right">
+                    <div class="goods"><label for="1"><img src="../images/1.jpg"/><div><input id="1"type="checkbox"name="goods"value="哆啦A梦1">哆啦A梦1</input></div></label></div>
+                    <div class="goods"><label for="2"><img src="../images/8.jpg"/><div><input id="2"type="checkbox"name="goods"value="哆啦A梦2">哆啦A梦2</input></div></label></div>
+                    <div class="goods"><label for="3"><img src="../images/1.jpg"/><div><input id="3"type="checkbox"name="goods"value="哆啦A梦3">哆啦A梦3</input></div></label></div>
+                    <div class="goods"><label for="4"><img src="../images/8.jpg"/><div><input id="4"type="checkbox"name="goods"value="哆啦A梦4">哆啦A梦4</input></div></label></div>
+                    <div class="goods"><label for="5"><img src="../images/1.jpg"/><div><input id="5"type="checkbox"name="goods"value="哆啦A梦5">哆啦A梦5</input></div></label></div>
+                    <div class="goods"><label for="6"><img src="../images/8.jpg"/><div><input id="6"type="checkbox"name="goods"value="哆啦A梦6">哆啦A梦6</input></div></label></div>
+                </div>
+            </div>
+            <div id="bottom">
+            </div>
+        </div>
+    </body>
+</html>

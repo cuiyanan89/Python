@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+	</head>
+	<body background="./images/1.jpg">
+	<h3>用户注册</h3>
+    <form>
+        <table width="60%">
+        <tr><td>姓名</td><td><input type="text" value="输入用户名"/></td></tr>
+        <tr><td>密码</td><td><input type="password"/></td></tr>
+
+        <tr>
+        <td>性别</td>
+        <td><label for="male">男</label><input type="radio"name="sex" value="male" id="male"/>
+            <label for="famale">女</label><input type="radio"name="sex" value="famale" id="famale"checked="checked"/></td>
+        <tr>
+            <td>爱好</td>
+            <td><label for="eat">饮食</label><input type="checkbox"id="eat"checked="checked"/><label for="wine">红酒</label><input type="checkbox" id="wine"/><label for="majiang">麻将</label><input type="checkbox"id="majiang"/><label for="travel">旅游</label><input type="checkbox"id="travel"/></td>
+        </tr>
+        </tr>
+        <tr>
+        <td>城市选择</td>
+        <td>
+            <select>
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+                <option>大连</option>
+                <option>西安</option>
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td>自我介绍</td>
+            <td><textarea rows="10" cols="60">关于自己的描述</textarea></td>
+        </tr>
+        <tr>
+            <td>头像上传</td>
+            <td><input type="file"/></td>
+        </tr>
+        <tr>
+        <td><input type="submit" value="提交"></td>
+        <td><input type="reset" value="重置"></td>
+        </tr>
+        </table>
+    </form>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+body,div,ul,li,img,hr,p,a{
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+input{
+    border-radius:5px;
+    width:130px;
+    margin:2px auto;
+}
+textarea{
+    border-radius:5px;
+    width:130px;
+}
+#title_out{
+    padding:6px;
+    background-color:#f0f0f0;
+}
+#title{
+    width:900px;
+    height:20px;
+    margin:0px auto;
+}
+a{
+    color:black;
+    font-size:0.8em;
+    display:inline-block;
+    text-decoration:none;
+    padding-left:5px;
+    padding-right:3px;
+    margin:-1px;
+    border-left:1px solid #d9d9d9;
+    }
+a:hover{
+    color:#cdc9c9;
+}
+#title_left{
+    float:left;
+}
+#title_right{
+    float:right;
+}
+#main{
+    clear:both;
+    position:relative;
+    width:900px;
+    height:500px;
+    margin:19px auto;
+}
+#top{
+    background-color:white;
+}
+#top_left{
+    float:left;
+}
+#top_left img{
+    width:110px;
+}
+#top_right{
+    margin:20px;
+    float:right;
+}
+#top_menu{
+    height:20px;
+    background-color:#b4eeb4;
+    clear:both;
+    padding:7px;
+    margin:0px auto;
+    border-radius:8px;
+}
+#top_menu ul{
+    margin:0px 10px;
+    height:20px;
+    list-style-type:none;
+    position:absolute;
+    left:30px;
+}
+#top_menu li{
+    margin-left:-1px;
+    padding-right:10px;
+    display:inline-block;
+}
+#center{
+    position:absolute;
+    width:900px;
+    height:400px;
+/*    background-color:#ccffff;*/
+    border-radius:8px;
+    top:130px;
+}
+#center_left{
+    float:left;
+    height:410px;
+    width:200px;
+    background-color:#ccffff;
+    border-radius:8px;
+    clear:both;
+}
+#no, #yes{
+    margin:10px 10px;
+    width:70px;
+}
+#menu{
+    width:200px;
+    height:115px;
+}
+hr{
+    clear:both;
+    margin:3px 10px;
+    border-top:1px dashed #0066cc;
+}
+#center_right{
+    float:right;
+    height:410px;
+    width:660px;
+}
+.goods {
+    width:180px;
+    float:left;
+    height:180px;
+    margin:10px 15px;
+}
+.goods div{
+    width:85px;
+    margin:0px auto;
+}
+.goods img{
+    margin:0px 20px;
+    width:140px;
+    height:160px;
+}
+.goods input{
+    width:15px;
+}

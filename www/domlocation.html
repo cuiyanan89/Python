@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+        <select id="myselect">
+            <option>baidu</option>
+            <option>sina</option>
+            <option>google</option>
+        </select>
+        <input type="button" value="assign" onclick="f1()"/>
+        <input type="button" value="replace" onclick="f2()"/>
+        <input type="button" value="href" onclick="f3()"/>
+	    <script>
+            var a = new Array('http://www.baidu.com',"http://www.sina.com.cn","http://www.google.com.hk")
+            function f1(){
+                var select = document.getElementById("myselect");
+                location.assign(a[select.selectedIndex]);
+            }
+            function f2(){
+                var select = document.getElementById("myselect");
+                location.replace(a[select.selectedIndex]);
+            }
+            function f3(){
+                var select = document.getElementById("myselect");
+                location.href = a[select.selectedIndex];
+            }
+        </script>
+	</body>
+</html>

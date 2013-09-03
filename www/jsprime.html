@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>prime</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            max = parseInt(prompt("素数范围1～n,n为?",100));
+            function prime_list(max){
+                var prime = new Array();
+                var isprime = new Array();
+                for (var i = 0 ; i < max ; i++){
+                    isprime.push(true);
+                }
+                var max_sqrt = Math.ceil(Math.sqrt(max));
+                for (var i = 2 ; i <=max_sqrt ; i++){
+                    if (isprime[i]){
+                        var k = max/i+1;
+                        for (var j = 2 ; j<k ; j++ ){
+                            isprime[i*j]=false;
+                        }
+                    }
+                }
+                for (var i = 2; i <=max; i++){
+                    if (isprime[i]){
+                        prime.push(i);
+                    }
+                }
+                return prime;
+            }
+            document.write('<p style="word-wrap:break-word">'+prime_list(max)+'</p>');
+        </script>
+    </body>
+</html>

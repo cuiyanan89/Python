@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>leap year</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+            var x = prompt("月份",1);
+            x = parseInt(x);
+            var msg = "30天";//默认小月天数为30
+
+            switch (x){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    msg = "31天";
+                    break;
+                case 2:
+                    var y = prompt("年份",1);
+                    if (y%4==0 && y%100!=0 || y%400==0){
+                        msg = "29天";
+                    }else{
+                        msg = "28天";
+                    }
+                    break;
+            }
+
+        alert(msg);
+        </script>
+	</head>
+	<body>
+	    <script type="text/javascript">document.write(msg);</script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+#main{
+    width:900px;
+    border:1px solid red;
+    margin:0px auto;
+    }
+#nav{
+    height: 159px;
+    background-image: url("../images/3.jpg");
+    background-repeat: no-repeat;
+    position:relative;
+    }
+#nav ul{
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    top:90px;
+    left:220px;
+    }
+#nav li{
+    display:inline-block;
+   /* width:45px;*/
+    margin:30px;
+    float:left;
+    }
+#nav a{
+    font-size:1.2em;
+    letter-spacing:3px;
+    font-weight:bold;
+    text-decoration:none;
+    color:gray;
+    }
+#nav a:hover{
+    font-size:1.2em;
+    text-decoration:none;
+    color:black;
+    }
+#left{
+    width:298px;
+    float:left;
+    border:1px solid blue;
+    overflow:hidden;
+    }
+#right{
+    width:598px;
+    float:right;
+    border:1px solid black;
+    }
+#footer{
+    clear:both;
+    background-color:purple;
+    border:1px solid yellow;
+    }

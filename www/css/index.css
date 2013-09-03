@@ -1,0 +1,51 @@
+body,div,ul,li,a{
+    padding:0px;
+    border:0px;
+    margin:0px;
+    }
+#main{
+    margin:0 auto;
+    border:1px solid purple;
+    width:1000px;
+    height:600px;
+    border-radius:8px;
+    }
+#nav{
+    background-image:url("../images/5.jpg");
+    background-color:black;
+    background-repeat:no-repeat;
+    background-position:right;
+    border-radius:8px;
+    height:194px;
+    position:relative;
+    }
+#nav ul{
+    list-style-type:none;
+    position:absolute;
+    top:90px;
+    left:40px;
+    word-spacing:35px;
+    }
+#nav li{
+    display:inline-block;
+    }
+#nav a{
+    font-size:2em;
+    color:white;
+    text-decoration:none;
+    }
+#left{
+    width:680px;
+    height:406px;
+    border:1px solid purple;
+    border-radius:8px;
+    overflow:hidden;
+    float:left;
+    }
+#right{
+    width:316px;
+    border:1px solid purple;
+    border-radius:8px;
+    height:406px;
+    float:right;
+    }

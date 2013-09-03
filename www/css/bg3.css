@@ -1,0 +1,9 @@
+#main{
+    width:900px;
+    border:1px solid red;
+    }
+#nav{
+    background-image:url("../images/1.jpg");
+    background-position:top left;
+    height:200px;
+    }

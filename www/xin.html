@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+    </head>
+    <body onload="xin()">
+        <div style="background-color:purple;width:600px;height:600px;">
+            <img id="img" src="./images/xin1.gif" style="width:30px;position:absolute;">
+        </div>
+        <script type="text/javascript">
+        var img = document.getElementById('img');
+        function xin(){
+            var a = 200;
+            var t = new Date();
+            t = t.getTime()/1000%(2*Math.PI);
+            var x = a*Math.cos(t)*(1+Math.cos(t));
+            var y = a*Math.sin(t)*(1+Math.cos(t));
+            img.style.left = y + 300 + 'px';
+            img.style.top = 100 + x + 'px';
+        }
+        setInterval("xin()",40);
+        </script>
+    </body>
+</html>

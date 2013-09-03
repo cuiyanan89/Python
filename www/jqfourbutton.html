@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>four button</title>
+        <style type="text/css">
+            .panal {
+                padding:60px;
+                background-color:yellow;
+                color:#FFFFFF;
+                font-size:50px;
+                font-weight:bold;
+                width:600px;
+                text-align:center;
+                }
+        </style>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript">
+            $('<input type="button" value="click me"/><input type="button" value="triggle click me"/><input type="button" value="detach hander"/><input type="button" value="show/hide text"/>').appendTo($('body'));
+            $('input[type="button"]').eq(0).click(function(){alert('you clicked me');
+            }).end().eq(1).click(function(){$('input[type="button"]:eq(0)').trigger('click');
+            }).end().eq(2).click(function(){$('input[type="button"]:eq(0)').unbind('click');
+            }).end().eq(3).toggle(function(){
+                $('.panel').hide('show');
+                },function(){$('.panel').show('show');
+                });
+        </script>
+    </head>
+    <body>
+        <div class="panal">welcome to jQuery</div>
+    </body>
+</html>

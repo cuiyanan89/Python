@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+        <h1 id="h1">h1111</h1>
+        <a id="a1"href="http://www.baidu.com" title="baidu" target="_blank">cuiyanan</a>
+        <script>
+        alert(document.nodeName);
+        var obj = document.getElementById('a1');
+        alert(obj.text);
+//        var text = obj.firstChild;
+//        var text = obj.lastChild;
+        var text = obj.childNodes;
+        for (var n = 0 ; n < text.length ; n++ ){
+            show_node(text[n]);
+        }
+        var attribute = obj.attributes;
+
+        function show_node(obj){
+           alert(obj.nodeName +"\n"+obj.nodeType +"\n"+obj.nodeValue);
+        }
+/*        for (n in attribute){
+            show_node(attribute[n]);
+        }*/
+        for (var n = 0 ; n < attribute.length ; n++){
+            show_node(attribute[n]);
+        }
+        </script>
+	</body>
+</html>

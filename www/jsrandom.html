@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>random</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+            var n = parseInt(prompt("猜数(1～n)输入n值",10));
+//            var x = parseInt(n * Math.random()) + 1;
+//            var x = Math.floor(n * Math.random()) + 1;
+            var x = Math.ceil(n * Math.random());
+            do{
+                var y = parseInt(prompt("guess what?",0));
+            }while(x != y)
+            alert("you guess it,it is " + x);
+        </script>
+	</head>
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>jssumzhishu</title>
+        <script type="text/javascript">
+            var zhishu_l = new Array();
+            while (true){
+                var x = prompt("质数范围从2到n，输入n值",100);
+                x = parseInt(x);
+                if (x>=2){
+                    break;
+                }
+            }
+            var sum = 0;
+            for (var n = 2 ; n<=x ; n++ ){
+                n_sqrt = Math.sqrt(n);
+                for (var i=2 ; i <= n_sqrt ; i++){
+                    if ( n%i == 0 ){
+                        break;
+                    }
+                }
+                if ( i > n_sqrt ){
+                    zhishu_l.push(n);
+                    sum += n;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p style="word-wrap:break-word;"><script>
+            document.write(zhishu_l.join("+")+"="+sum);
+        </script></p>
+    </body>
+</html>

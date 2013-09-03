@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+	</head>
+	<body>
+        <div id="menu"></div>
+        <input type="button" id="yes" value="确认">
+        <div id="media"></div>
+        <script type="text/javascript">
+            var menu = document.getElementById("menu");
+            var media = document.getElementById("media");
+            var yes_btn = document.getElementById("yes");
+            var list = {"food":['鸡','鸭','鱼','牛','羊','猪'],"price":{'鸡':10,'鸭':9,'鱼':8,'牛':7,'羊':6,'猪':5}};
+            for (var n = 0 ; n < list['food'].length ; n++ ){
+                var obj = document.createElement("input");
+                obj.setAttribute('type',"checkbox");
+                obj.setAttribute('name','food');
+                obj.setAttribute('value',list['food'][n]);
+                menu.innerHTML += list['food'][n];
+                menu.appendChild(obj);
+            }
+            function yes(){
+                var select = menu.childNodes;
+                var price = 0 ;
+                media.innerHTML ='';
+                for (var n = 0 ; n < select.length ; n++){
+                    if (select[n].checked){
+                        var select_value = select[n].value;
+                        media.innerHTML += select_value
+                        price += list['price'][select_value];
+                        }
+                }
+                media.innerHTML += price;
+                for (var n = 0 ; n < select.length ; n++ ){
+                    select[n].checked = false;
+                }
+            }
+            yes_btn.onclick = yes;
+        </script>
+	</body>
+</html>

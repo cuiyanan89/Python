@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>domradio</title>
+    </head>
+    <body>
+        <script>
+            var body_obj = document.getElementsByTagName("body")[0];
+            var radio_obj = document.createElement("input");
+            radio_obj.setAttribute("type","radio");
+
+            var button_checked = document.createElement("input");
+            button_checked.setAttribute("type","button");
+            button_checked.setAttribute("value","checked");
+            button_checked.setAttribute("onclick",'javascript:radio_obj.checked=true');
+            
+            var button_unchecked = document.createElement("input");
+            button_unchecked.setAttribute("type","button");
+            button_unchecked.setAttribute("value","unchecked");
+            button_unchecked.setAttribute("onclick",'javascript:radio_obj.checked=false');
+         
+            body_obj.appendChild(radio_obj);
+            body_obj.appendChild(button_checked);
+            body_obj.appendChild(button_unchecked);
+        </script>
+    </body>
+</html>

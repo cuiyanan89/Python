@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+/*            var chengji= 80;
+            if (chengji >=90){
+                alert('优');
+            }else if (chengji>=75){
+                alert('良');
+            }else if (chengji>=60){
+                alert('中');
+            }else{
+                alert('差');
+                }*/
+            var chengji=89;
+            chengji = prompt("shurukaoshichengji",'0');
+            alert(typeof(chengji));
+            chengji = parseInt(chengji);
+            alert(typeof(chengji));
+            var msg;
+            if (chengji>=90){
+                msg="you";
+                }else if (chengji>=75){
+                    msg="liang"
+                }else if (chengji>=60){
+                    msg="zhong"
+                }else{
+                    msg="cha"}
+        </script>
+	</head>
+	<body>
+        <script type="text/javascript">document.write(chengji); document.write(msg);</script>	
+	</body>
+</html>

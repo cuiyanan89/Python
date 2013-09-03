@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+	</head>
+	<body>
+        <dl>
+            <dt>OS</dt>
+            <dd>unix</dd>
+            <dd>ubuntu</dd>
+            <dd>windows</dd>
+            <dt>Lanaguage</dt>
+            <dd>Python</dd>
+            <dd>C++</dd>
+            <dd>JAVA</dd>
+            <dt>Machine</dt>
+            <dd>IBM</dd>
+            <dd>HP</dd>
+            <dd>Dell</dd>
+        </dl>
+        <script type="text/javascript">
+            var dt = document.getElementsByTagName("dt");
+            var dd = document.getElementsByTagName("dd");
+            for (var n = 0 ; n < dt.length ; n++ ){
+                dt[n].onclick = xianshi;
+            }
+            for (var n = 0 ; n < dd.length ; n++ ){
+                dd[n].style.display = 'none';
+            }
+            function xianshi(){
+                for (var n = 0 ; n < dd.length ; n++ ){
+                    dd[n].style.display = "none";
+                }
+                var obj = this;
+                var next = obj.nextSibling;
+                while (next.nodeName != 'DT'){
+                    if (next.nodeName == 'DD'){
+                        next.style.display = "block";
+                    }
+                    next = next.nextSibling;
+                }
+            }
+        </script>
+	</body>
+</html>

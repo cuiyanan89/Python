@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+	</head>
+	<body>
+        <input id="btn" type="button" value="add">
+        <script type="text/javascript">
+        function f1(){
+            alert(this.nodeName);
+        }
+        var btn = document.getElementById('btn');
+        btn.onclick = f1;
+        </script>
+	
+	</body>
+</html>

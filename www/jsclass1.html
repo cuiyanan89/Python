@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+            function Person(name,age,sex){
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.getName = getName;
+                this.setName = setName;
+                this.getAll = function(){
+                    var a = new Array(this.name,this.age,this.sex);
+                    return a;
+                }
+            }
+            function getName(){
+                return this.name;
+            }
+            function setName(name){
+                this.name = name;
+            }
+            function f(p,name){
+                p.setName(name);
+            }
+            var zhangsan =new Person("zhangsan",23,"male");
+            f(zhangsan,"aaaaaaaaaaaaaa");
+            alert(zhangsan.name);
+        </script>
+	</head>
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+        <h1 id="h1">h1111</h1>
+        <a id="a1"href="http://www.baidu.com" title="baidu" target="_blank">baidu</a>
+        <script>
+        var obj = document.getElementById('a1');
+        var attrs = obj.attributes;
+
+        //var obj2 = document.getElementById('h1');
+        function show_node(obj){
+           alert(obj.nodeName +"\n"+obj.nodeType +"\n"+obj.nodeValue);
+        }
+//        for (n in attrs){
+//            show_node(attrs[n]);
+//        }
+        for (var n = 0; n < attrs.length;n++){
+            show_node(attrs[n]);
+        }
+        //show_node(obj2);
+        </script>
+	</body>
+</html>
