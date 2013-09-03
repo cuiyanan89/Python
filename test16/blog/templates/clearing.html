@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{%block title%}购物车{%endblock%}
+{%block ul%}
+  <li class="active">
+    <a href="/index/">首页</a>
+  </li>
+    {%for type in types%}
+        <li class=""><a href='/index/{{type.id}}'>{{type.foodtype}}</a></li>
+    {%endfor%}
+  <li class="">
+    <a href="/clearing/">去结算</a>
+  </li>
+{%endblock%}
+{%block userlogin%}
+<div style="font-size:15px;float:right;color:white;">
+    <span>欢迎您： {{user.username}} </span>
+    <a href="/logout/"class="btn">注销</a>
+</div>
+{%endblock%}
+{%block pagename%}
+购物车
+{%endblock%}
+
+{%block content%}
+    {%if cart%}
+    {%for item in cart.items%}
+        <fieldset>
+        <legend>{{item.food.foodname}}*{{item.quantity}}</legend>
+        <div>
+            <b>单价:{{item.food.foodprice}}元</b>
+        </div>
+        </fieldset>
+        <br>
+    {%endfor%}
+    <span>总计{{cart.total_price}}元</span>
+    {%endif%}
+    <div>
+    <a href="/confirm/"class='btn'>确认订单</a><a href="/cleancart/"class='btn'>清空购物车</a>
+    </div>
+{%endblock%}
+

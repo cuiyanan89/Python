@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+{%block ul%}
+  <li class="active">
+    <a href="/index/">首页</a>
+  </li>
+  <li class="">
+    <a href="">主食</a>
+  </li>
+  <li class="">
+    <a href="">菜谱</a>
+  </li>
+  <li class="">
+    <a href="">饮料</a>
+  </li>
+  <li class="">
+    <a href="/clearing">去结算</a>
+  </li>
+{%endblock%}
+          {%block userlogin%}
+            <form action="/login/" method="post" class="pull-right"style="margin-top:5px;">{%csrf_token%}
+                <input name="username" class='input-small' type="text" placeholder='用户名'>
+                <input name="password" class='input-small' type='password' placeholder='密码'>
+                <input type="submit"class="btn" style='margin-top:0px;margin-bottom:10px;'value="登录">
+                <a href="/regist/">注册</a>
+            </form>
+            {%endblock%}
+
+{%block pagename%}
+首页
+{%endblock%}
+
+{%block content%}
+{%for food in foods%}
+<fieldset>
+<legend>{{food.foodname}}</legend>
+{{food.foodprice}}元
+</fieldset>
+{%endfor%}
+{%endblock%}
