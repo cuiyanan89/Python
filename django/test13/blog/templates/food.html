@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+        <style src="/static/js/bootstrap.min.js">
+        </style>
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body style="background-color:#dfdfdf;">
+	    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          </button>
+          <a class="brand" href="/">美食网</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="/food/1" class="bootstro" data-bootstro-placement="bottom" data-bootstro-step="0">主食</a>
+              </li>
+              <li class="">
+                <a href="/food/2" class="bootstro" data-bootstro-placement="bottom" data-bootstro-step="1">菜谱</a>
+              </li>
+              <li class="">
+                <a href="/food/3" class="bootstro" data-bootstro-placement="bottom" data-bootstro-step="2">饮料</a>
+              </li>
+              <li class="">
+                <a href="/clearing" class="bootstro" data-bootstro-placement="bottom" data-bootstro-step="3">去结算</a>
+              </li>
+            </ul>
+          </div>
+          <div style="float:right;color:white;margin:10px;" class="bootstro">{{username}}&nbsp;&nbsp;&nbsp;<a class='bootstro' href="/logout/">注销</a></div>
+        </div>
+      </div>
+    </div>
+    <div style="width:1000px;background-color:white;height:550px;margin:50px auto 0px;border-radius:5px;">
+        <form method="post">{% csrf_token %}
+        {%for food in food_list%}
+            <img src="/static/{{food.foodimg}}">{{food.foodname}}:{{food.foodprice}}元
+            <select name='num'style="width:50px;">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <a href="/food/{{food.id}}"class='btn'>选购</a>
+        {%endfor%}
+        </form>
+    </div>
+	</body>
+</html>

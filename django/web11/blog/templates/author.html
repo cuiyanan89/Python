@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block title%}author{%endblock%}
+{%block thetitle%}
+    <h4>{{book}}</h4>
+{%endblock%}
+{%block thelist%}
+    {%for author in author_list%}
+        <li style="clear:both;"><a href="/book/{{author.id}}">{{author.name}}</a></li>
+    {%endfor%}
+{%endblock%}

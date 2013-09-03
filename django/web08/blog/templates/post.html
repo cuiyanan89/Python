@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+        <link rel='stylesheet' type="text/css" href="/static/css/bootstrap.css">
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+	    <div style="width:900px;margin:20px auto;">
+            <h2 style="text-align:center;margin-bottom:0px;">最近热贴</h2>
+            <div style="width:900px">
+            <ol style="margin:0px auto;">
+            {%for post in posts%}
+                <li><a href="/replay/{{post.id}}">{{post.title}}</a></li>
+            {%endfor%}</ol>
+            <a class="btn"href="/add">发帖</a>
+            </div>
+        </div>
+	</body>
+</html>

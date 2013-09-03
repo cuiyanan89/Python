@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+        <link rel="stylesheet" type="test/css"href="/static/css/bootstrap.css">
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+	    <div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12"style="width:900px;margin:20px auto;">
+            <div class="row-fluid"style="width:1000px;">
+                <div class="span8">
+                    {%for new in news%}
+                        <div style="clear:left">
+                        <fieldset >
+                            <legend>{{new.new_title}}</legend>
+                                <div style="float:left">{{new.new_content}}</div>
+                        <img src="static/{{new.new_img}}"style="width:100px;float:right">
+                        </fieldset>
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="span4"style="float:left;">
+                    <form class="form-horizontal" action='new'method='post'enctype="multipart/form-data">{% csrf_token %}
+                        <div class="control-group">
+                             <label class="control-label" for="inputtitle">title</label>
+                            <div class="controls">
+                                <input id="inputtitle" name="title" type="text" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                             <label class="control-label" for="textarea">content</label>
+                            <div class="controls">
+                                <textarea id="textarea" name="content"rows="3"cols="25"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                             <label class="control-label" for="inputimg">img</label>
+                            <div class="controls"style="position:relative;">
+                                <!--<input type='file'id="inputimg"  name="img"></input>-->
+                                <input type="text"name="textfield"id='textfield'class="txt"style="width:50px;float:left;display:inline-block;"/>
+                                <label for="fileField"><input type="button"class='btn'value="choice"style="width:60px;float:left;display:inline-block;"/>
+                                <input type="file"name="img"class="file"id="fileField" style="position:absolute;opacity:0;" size="28"onchange="document.getElementById('textfield').value=this.value"/></label>
+                            </div>
+                        </div>
+                            <div class="controls">
+                                <input type="submit" class="btn"value='submit'></input>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	</body>
+</html>

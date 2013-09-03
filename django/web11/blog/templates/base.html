@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>{%block title%}test page{%endblock%}</title>
+            <link rel='stylesheet' type='text/css' href="/static/css/bootstrap.css">
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body style="background-color:#efefef;position:relative;">
+        <div style="width:150px;margin:20px auto;padding:20px;background-color:white;border-radius:5px;">
+        {%block thetitle%}
+        {%endblock%}
+        <hr/>
+        {%block thelist%}
+        {%endblock%}
+        <hr/>
+        <a href="/book/"class='btn'>books</a>
+        <a href="/author/"class='btn'>authors</a>
+        </div>
+	</body>
+</html>

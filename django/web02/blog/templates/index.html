@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>{{title}}</title>
+
+        <style type="text/css">
+        @import url("/static/css/index.css");
+        </style>
+
+        <script type="text/javascript" src="/static/js/index.html">
+        </script>
+	</head>
+	<body>
+	    <h3>模板测试,位置:{{location}}</h3>
+	    <h3>HttpRequest.path:{{path}}</h3>
+        <p>商品列表</p>
+        <img id="img1"src="/static/images/1.jpg"/>
+        {%for good in goods_list%}
+            <li>{{good}}</li>
+        {%endfor%}
+        <p>搜索引擎</p>
+        {%for s,a in ss.iteritems%}
+            <li><a href={{a}}>{{s}}</a></li>
+        {%endfor%}
+        {%for i in jpg%}
+            <img src={{i}}>
+        {%endfor%}
+	</body>
+</html>

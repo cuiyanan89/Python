@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+        <link rel="stylesheet"type="text/css"href="/static/css/bootstrap.min.css">
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+        <a href="/post" style="background:none;position:absolute;top:-2px;"><img src="/static/img/return-back.png"style="margin:0;padding:0;border:0;"></a>
+	    <form id="myform" action="/replay/{{post.id}}"method="post" style="width:900px;margin:0px auto;">{% csrf_token %}
+            <h2 style="text-align:center">回贴</h2>
+            <div style="width:900px;margin:0px auto;">
+            <fieldset style="width:900px;height:400px;">
+            <legend>{{post.title}}</legend>
+            <div>{{post.content}}<div>
+            {%for replay in replays%}
+                <hr/><div>{{replay.content}}<label style="display:inline-block;float:right;" for='{{replay.id}}'><input type="submit" style="opacity:0;" id={{replay.id}} name='func' value='{{replay.id}}'><a class="btn">delete</a><label></div>
+            {%endfor%}
+            </fieldset>
+            <textarea rows='3'class="input-xxlarge" name="content"></textarea><br>
+            <input class="btn"type="submit" name='func' value="replay">
+            </div>
+        </form>
+	</body>
+</html>

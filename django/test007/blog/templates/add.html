@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+        <link rel="stylesheet" type="test/css"href='/static/css/bootstrap.css'>
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body style="background-color:#cfcfcf;margin:0;padding:0;border:0;">
+        <a href="/new"style="background:none;position:absolute;">
+            <img src="/static/img/return-back.png"style='margin:0;padding:0;border:0'/>
+        </a>
+        <div class="container">
+	    <form class="form-signin"action="add"method="post" enctype="multipart/form-data" style="margin:40px auto;border-radius:8px;padding:25px;width:300px;background-color:white">{% csrf_token %}
+        <h2 class="form-signin-heading">Add news</h2>
+        <input type="text" name="new_title" class="input-block-level" name="new_title" placeholder="title"/>
+        <textarea type="text" name="new_content" class="input-block-level" name="new_content" placeholder="content"rows='3'></textarea>
+        <label class="checkbox"for="uploadimg"style="padding:0px;position:relative;">
+          <input type="text" style="float:left;display:inline-block;margin:0px 12px 0px 0px;"id="textfield"/>
+          <input type="button"class='btn'value="choice" style="float:left;margin:0px;displat:inline-block;"/>
+          <input type="file" name="new_img" id='uploadimg'style="opacity:0;position:absolute;left:0px;" onchange="document.getElementById('textfield').value=this.value"/>
+        </label>
+        <button class="btn btn-large btn-primary" type="submit"style="margin:10px auto;">upload</button>
+      </form>
+        </div>
+	</body>
+</html>

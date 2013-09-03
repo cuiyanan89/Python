@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+        <link rel="stylesheet" type="test/css" href="static/css/bootstrap.css">
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body style="background-color:#cfcfcf;">
+    <a name="top"></a>
+        <a href='/add'class="btn btn-large btn-primary" style="position:absolute;top:20px;left:20px;">add
+        </a>
+	    <div id="main" style="margin:30px auto;width:900px;background-color:white;padding:20px;border-radius:8px;">
+        {%for new in news%}
+            <fieldset>
+                <legend>
+                    {{new.new_title}}
+                </legend>
+                <div style="float:left;display:inline-block;">{{new.new_content}}</div>
+                <img src="static/{{new.new_img}}"style="float:right;width:100px;inline-block;"/>
+            </fieldset>
+        {%endfor%}
+        </div>
+        <a href='#top'style="position:fixed;bottom:20px;right:20px;">
+            <img src='/static/img/add.png'>
+        </a>
+	</body>
+</html>

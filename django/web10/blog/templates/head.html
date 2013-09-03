@@ -1,0 +1,12 @@
+    <div style="position:relative;background:url(/static/img/3.jpg);background-repeat:no-repeat;width:900px;height:580px;margin:20px auto;border-radius:8px;background-color:white;">
+<div style='position:absolute;left:300px;top:100px;'>
+    <ul>
+        <li style="display:inline-block;font-size:30px;"><a href="/index">首页</a></li>
+        {%for nav in nav_list%}
+            <li style="display:inline-block;font-size:30px;"><a href="/nav/{{nav.id}}">{{nav.name}}</a></li>
+        {%endfor%}
+    </ul>
+    {%for crumb in crumbs%}
+        <li style="display:inline-block;font-size:20px;">{{crumb}}</li>
+    {%endfor%}
+</div>	

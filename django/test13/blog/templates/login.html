@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>login</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body style="background-color:#dfdfdf;">
+        <div style="width:225px;margin:50px auto;padding:40px;border-radius:5px;background-color:white;">
+        <h2>login</h2>
+	    <form method="POST">{% csrf_token %}
+            {{uf}}
+            <input type='submit' class="btn" value="login">
+        </form>
+        </div>
+	</body>
+</html>

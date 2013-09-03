@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>{{title}}</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+        {%for picture in pic_list%}
+            <img src="/static/{{picture.pic_file}}">
+        {%endfor%}
+	</body>
+</html>

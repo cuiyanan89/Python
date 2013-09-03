@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+        <link rel="stylesheet" type="text/css"href="/static/css/bootstrap.min.css">
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body style="background-color:#cfcfcf;">
+        {%include 'head.html'%}
+        <div style="position:absolute;top:200px;">
+            <h2>{{new.title}}</h2>{{new.date}}
+            <p>{{new.content}}</p><img style="width:150px;"src="/static/upload/{{new.img}}">
+        </div>
+	</body>
+</html>

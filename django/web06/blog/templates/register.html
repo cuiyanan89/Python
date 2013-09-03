@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>test page</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+        </script>
+	</head>
+	<body>
+	    <form action=''method='post'>{% csrf_token %}
+            username:<input type="text"name="username"/></br>
+            password:<input type="password"name="password"/></br>
+            birthday:<input type="date"name="birthday"/><br>
+            sex: male<input type="radio"name="sex"checked="checked"value='m'/>famale<input type="radio"name="sex"value="f"/><br/>
+            <input type='submit'value="register"/>
+        </form>
+	</body>
+</html>

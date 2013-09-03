@@ -1,0 +1,6 @@
+{%extends 'base.html'%}
+{%block content%}
+    {%for new in nav.new_set.all%}
+        <li><a href="/new/{{new.id}}">{{new.title}}</a></li>
+    {%endfor%}
+{%endblock%}
