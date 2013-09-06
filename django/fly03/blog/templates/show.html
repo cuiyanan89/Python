@@ -1,0 +1,53 @@
+{%extends "base.html"%}
+{%block title%}
+index
+{%endblock%}
+{%block top%}
+{%if user.is_authenticated%}
+<span>welcome {{user.username}}</span>
+<a style="text-decoration:none;"href="/logout/">注销</a>
+{%else%}
+<div id="logindiv">
+<input id="username"type="text"placeholder="username">
+<input id="password"type="password"placeholder="password">
+<input type="button" value="登录" onclick="loginjs()">
+<script>
+    var req = new XMLHttpRequest();
+    req.open('post','/login/',true);
+    req.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+    req.onreadystatechange = process;
+    function loginjs(){
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        req.send("username="+username+"&password="+password);
+    }
+    function process(){
+        if(req.readyState==4 && req.status==200){
+            if(req.responseText!=''){
+                var jsonobj = eval("("+req.responseText+")");
+                var logindiv = document.getElementById('logindiv');
+                logindiv.innerHTML = "<span>welcome "+jsonobj.username+"</span><a style='text-decoration:none;'href='/logout/'>注销</a>"
+            }
+        }
+    }
+</script>
+</div>
+{%endif%}
+{%endblock%}
+{%block middle%}
+<h2>{{post.title}}</h2>
+<h3>{{post.content}}</h3>
+{%for contact in contacts%}
+<p>{{contact.content}}</p>
+{%endfor%}
+{%if user.is_authenticated%}
+<form action="/addreplay/{{post.id}}"method="post">{%csrf_token%}
+<textarea name="content" rows="4"cols="20"></textarea>
+<br/>
+<input type="submit"value='replay'>
+</form>
+{%endif%}
+{%endblock%}
+{%block bottom%}
+{%include "page.html"%}
+{%endblock%}

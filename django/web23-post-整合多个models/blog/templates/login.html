@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>test</title>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+    <div>{{user.username}}</div>
+    <div id='index_msg'>
+    <form action='/login/' method='post'>{%csrf_token%}
+    姓名<input type='text' name='username' id='username'/>
+    密码<input type='password' name='password' id='password'/>
+    <input type='button' value='登录' onclick='index()'/>
+    </form>
+    </div>
+    <hr/>
+    <div>当前的时间是
+    <script>
+    var now=new Date();
+    document.write(now.toLocaleString())
+    </script>
+    </div>
+    <script type="text/javascript">
+    function index(){
+        var hr=new XMLHttpRequest();
+        hr.open('post','/login/',true);
+        hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        hr.onreadystatechange=process;
+        var username=document.getElementById('username').value;
+        var password=document.getElementById('password').value;
+        //alert(username);
+        hr.send('username='+username+'&password='+password);
+    }
+    function process(){
+        if(hr.readyState==4 && hr.status==200){
+            if(hr.responseText !=''){
+                var index_msg=document.getElementById("index_msg").value;
+                alert(index_msg);
+                index_msg.innerHTML='welcome'+hr.responseText;
+            }
+        }
+    }
+    </script>
+    </body>
+</html>
